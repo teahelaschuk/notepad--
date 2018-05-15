@@ -21,16 +21,29 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Random r;
         
         public MainWindow()
         {
+            r = new Random();
             InitializeComponent();
         }
 
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void MenuItemNew_Click(object sender, RoutedEventArgs e)
         {
+            MenuItemColour_Click(sender, e);
+        }
 
+        private void MenuItemColour_Click(object sender, RoutedEventArgs e)
+        {
+            tbox.Foreground = new SolidColorBrush(Color.FromRgb((byte)r.Next(1, 255),
+              (byte)r.Next(1, 255), (byte)r.Next(1, 233)));
+        }
+
+        private void MenuItemExit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

@@ -18,13 +18,32 @@
         </Grid.RowDefinitions>
         
         <Menu Grid.Row="0">
-            <MenuItem Header="New" IsEnabled="True"/>
-            <MenuItem Header="Exit" IsEnabled="True"/>
+            <MenuItem Header="File" IsEnabled="True" Click="MenuItemNew_Click">
+                <MenuItem Header="New" IsEnabled="True" Click="MenuItemNew_Click"/>
+                <MenuItem Header="Exit" IsEnabled="True" Click="MenuItemExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Randomize Colour" IsEnabled="True" Click="MenuItemColour_Click"/>
         </Menu>
 
 
         <Viewbox  Grid.Row="1" Stretch="Fill">
-            <TextBox Grid.Row="1" Width="800" Background="{x:Null}" Foreground="Red" SelectionBrush="Black" FontSize="120" FontWeight="Bold" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" TextWrapping="Wrap" AcceptsReturn="True" AutomationProperties.IsColumnHeader="True" IsUndoEnabled="False" MinLines="5">
+            <TextBox Grid.Row="1" 
+                     Name="tbox" 
+                     Width="800" 
+                     BorderThickness="0"
+                     Background="{x:Null}" 
+                     BorderBrush="{x:Null}"
+                     Foreground="Red"
+                     CaretBrush="Red"
+                     SelectionBrush="Black" 
+                     FontSize="120" 
+                     FontWeight="Bold" 
+                     HorizontalScrollBarVisibility="Disabled" 
+                     VerticalScrollBarVisibility="Disabled" 
+                     TextWrapping="Wrap" AcceptsReturn="True" 
+                     AutomationProperties.IsColumnHeader="True" 
+                     IsUndoEnabled="False" 
+                     MinLines="5">
                 <TextBox.Effect>
                     <BlurEffect/>
                 </TextBox.Effect>
