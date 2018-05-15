@@ -21,6 +21,15 @@
             <MenuItem Header="New" IsEnabled="True"/>
             <MenuItem Header="Exit" IsEnabled="True"/>
         </Menu>
-        
+
+
+        <Viewbox  Grid.Row="1" Stretch="Fill">
+            <TextBox Grid.Row="1" Width="800" Background="{x:Null}" Foreground="Red" SelectionBrush="Black" FontSize="120" FontWeight="Bold" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" TextWrapping="Wrap" AcceptsReturn="True" AutomationProperties.IsColumnHeader="True" IsUndoEnabled="False" MinLines="5">
+                <TextBox.Effect>
+                    <BlurEffect/>
+                </TextBox.Effect>
+            </TextBox>
+        </Viewbox>
+
     </Grid>
 </Window>
